@@ -3,7 +3,7 @@ console.log('TEST RUN!');
 
 var amqp = require('amqplib/callback_api');
 
-amqp.connect('amqp://127.0.0.1:5672', function(error0, connection) {
+amqp.connect('amqp://localhost', function(error0, connection) {
     if (error0) {
         throw error0;
     }

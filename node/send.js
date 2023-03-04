@@ -9,7 +9,11 @@ await channel.assertQueue(queue, { durable: false });
 
 console.log('Viesti lähettyy...');
 
-setTimeout(() => {
+function sendMessage() {
     channel.sendToQueue(queue, Buffer.from(message));
     console.log('Viesti lähetetty!');
+}
+
+setInterval(() => {
+    sendMessage();
 }, 1500);

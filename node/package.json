@@ -4,9 +4,9 @@
     "description": "template for message queue",
     "main": "index.js",
     "scripts": {
-        "test": "node index.js",
-        "send": "node send.js",
-        "receive": "node receive.js"
+        "test": "node ./index.js",
+        "send": "node ./send.js",
+        "receive": "node ./receive.js"
     },
     "repository": {
         "type": "git",
