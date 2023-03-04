@@ -1,0 +1,31 @@
+{
+    "name": "message-queue-template",
+    "version": "0.0.1",
+    "description": "template for message queue",
+    "main": "index.js",
+    "scripts": {
+        "test": "node index.js",
+        "send": "node send.js",
+        "receive": "node receive.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Maiska123/message-queue-template.git"
+    },
+    "keywords": [
+        "mqtt",
+        "rabbitmq",
+        "message",
+        "queue"
+    ],
+    "author": "Maiska",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Maiska123/message-queue-template/issues"
+    },
+    "homepage": "https://github.com/Maiska123/message-queue-template#readme",
+    "dependencies": {
+        "amqplib": "^0.10.3"
+    },
+    "type": "module"
+}
