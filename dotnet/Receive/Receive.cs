@@ -3,14 +3,16 @@ using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
 var factory = new ConnectionFactory { HostName = "localhost" };
+// var factory = new ConnectionFactory { Uri = new Uri("amqps://**AMQP_URI**") };
 using var connection = factory.CreateConnection();
 using var channel = connection.CreateModel();
 
-channel.QueueDeclare(queue: "hello",
-                     durable: false,
-                     exclusive: false,
-                     autoDelete: false,
-                     arguments: null);
+// no need to declare if one up already
+// channel.QueueDeclare(queue: "testing",
+//                      durable: true,
+//                      exclusive: false,
+//                      autoDelete: false,
+//                      arguments: null);
 
 Console.WriteLine(" [*] Waiting for messages.");
 
@@ -21,7 +23,8 @@ consumer.Received += (model, ea) =>
     var message = Encoding.UTF8.GetString(body);
     Console.WriteLine($" [x] Received {message}");
 };
-channel.BasicConsume(queue: "hello",
+
+channel.BasicConsume(queue: "testing",
                      autoAck: true,
                      consumer: consumer);
 

@@ -2,7 +2,7 @@ import { connect } from 'amqplib';
 
 const connection = await connect('amqp://localhost');
 const channel = await connection.createChannel();
-const queue = 'test-messages';
+const queue = 'testing';
 
 await channel.assertQueue(queue, { durable: false });
 
