@@ -7,4 +7,4 @@
 
 ### ----
 
-![example](example.png)
+![example_pic](example_chatting.png)
